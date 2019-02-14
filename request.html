@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dev Site Request Checklist</title>
+	<meta name="robots" content="noindex">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<h1>Dev Request Site Checklist</h1>
+
+	<form id="form" method="post" action="contactForm.php">
+
+		<!-- Senders Email -->
+		<div>
+			<div class="labels">
+				<label for="email">Email: </label>
+			</div>
+			<div class="rightCol">
+				<input class="input-field" type="email" name="email" placeholder="Enter your email">
+			</div>
+		</div>
+
+		<!-- Domain for request-->
+		<div>
+			<div class="labels">
+				<label for="domain">Domain: </label>
+			</div>
+			<div class="rightCol">
+				<input class="input-field" type="text" name="domain" placeholder="example.com">
+			</div>
+		</div>
+
+		<!-- Original Ticket ID -->
+		<div>
+			<div class="labels">
+				<label for="ticket">Original Ticket ID: </label>
+			</div>
+			<div class="rightCol">
+				<input class="input-field" type="text" name="ticket" placeholder="XXX-XXX-XXXXX">
+			</div>
+		</div>
+
+		<!-- Request Type -->
+		<div>
+			<div class="labels">
+				<label for="request">Choose request type: </label>
+			</div>
+			<div class="rightCol">
+				<select class="dropdown" name="request">
+					<option disabled selected value>Select an option</option>
+					<option value="fresh install">fresh install</option>
+					<option value="copy of">copy of</option>
+				</select>
+			</div>
+		</div>
+	
+		<!-- Additional Information -->
+		<div>
+			<div class="labels">
+				<label for="message">Include any other relevant information: </label>
+			</div>
+			<div class="rightCol">
+				<textarea class="input-field" style="height:50px;resize:vertical;"  name="message" placeholder="(Template install, copy WordPress, exclude graphics directory, etc.)"></textarea>
+			</div>
+		</div>
+		<input id="submit" type="submit" value="Submit">   
+		</table>
+	
+	</form>
+
+</body>
+</html>
