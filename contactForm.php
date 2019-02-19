@@ -1,12 +1,10 @@
 <?php
 if(isset($_POST['email'])) {
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
     $emailTo = "";
     $subject = "Dev Site: " . $_POST['domain'];
  
     function died($error) {
-        // your error code can go here
+        // error code
         echo "We are very sorry, but there were error(s) found with the form you submitted. ";
         echo "These errors appear below.<br /><br />";
         echo $error."<br /><br />";
@@ -14,8 +12,7 @@ if(isset($_POST['email'])) {
         die();
     }
  
- 
-    // validation expected data exists
+    // validation check, does data exists
     if(!isset($_POST['email']) ||
         !isset($_POST['domain']) ||
         !isset($_POST['ticket']) ||
@@ -23,14 +20,13 @@ if(isset($_POST['email'])) {
         !isset($_POST['message'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
- 
-     
- 
-    $email = $_POST['email']; // required
-    $domain = $_POST['domain']; // required
-    $ticket = $_POST['ticket']; // required
-    $request = $_POST['request']; // not required
-    $message = $_POST['message']; // required
+    
+    // required data to be outputted
+    $email = $_POST['email'];
+    $domain = $_POST['domain'];
+    $ticket = $_POST['ticket'];
+    $request = $_POST['request']; 
+    $message = $_POST['message']; 
  
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
@@ -62,21 +58,18 @@ if(isset($_POST['email'])) {
   }
  
     $email_message = "Dev site request details below.\n\n";
- 
      
     function clean_string($string) {
       $bad = array("content-type","bcc:","to:","cc:","href");
       return str_replace($bad,"",$string);
     }
  
-     
- 
-    // $email_message .= "Your email: ".clean_string($email)."\n";
+    // email message with required data
     $email_message .= "Domain: ".clean_string($domain)."\n";
     $email_message .= "Original Ticket ID: ".clean_string($ticket)."\n";
     $email_message .= "Request Type: ".clean_string($request)."\n";
     $email_message .= "Include any other relevant information: ".clean_string($message)."\n";
- 
+
 // create email headers
 $headers = 'From: '.$email."\r\n".
 'Reply-To: '.$email."\r\n" .
@@ -84,11 +77,9 @@ $headers = 'From: '.$email."\r\n".
 @mail($emailTo, $subject, $email_message, $headers);  
 ?>
  
-<!-- include your own success html here -->
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
+<!-- success message -->
+ The dev site request form has been successfully submitted. 
+
 <?php
- 
 }
 ?>
