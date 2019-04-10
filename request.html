@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Dev Site Request Checklist</title>
-	<meta name="robots" content="noindex">
-	<link rel="stylesheet" type="text/css" href="lib/css/style.css">
+    <title>Dev Site Request Checklist</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- true css file path -->
+    <link rel="stylesheet" type="text/css" href="lib/css/style.css">
+    <!-- import the webpage's stylesheet glitch testing only -->
+    <!-- <link rel="stylesheet" href="/style.css"> -->
 </head>
 <body>
-	<h1>Dev Request Site Checklist</h1>
-	<form id="form" method="post" action="lib/php/contactForm.php">
+    <h1>Dev Request Site Checklist</h1>
+    <form id="form" method="post" action="lib/php/contactForm.php">
 		<table>
 			<!-- Senders Email -->
 			<div>
@@ -46,7 +52,17 @@
 						<option disabled selected value>Select an option</option>
 						<option value="fresh install">fresh install</option>
 						<option value="copy of">copy of</option>
-					</select>
+                    </select>
+                    <span id="subDomainOne">
+                            <input class="input-field subWidth" type="text" name="subDomain" placeholder="subdomain">
+                    </span>
+                    <div>
+                        <span id="subDomainTwo">
+                            <input class="input-field width subDomainFrom" type="text" name="subDomainFrom" placeholder="copy from">
+                            to
+                            <input class="input-field width" type="text" name="subDomainTo" placeholder="copy to">
+                        </span>
+                    </div>
 				</div>
 			</div>
 			<!-- Additional Information -->
@@ -55,11 +71,17 @@
 					<label for="message">Include any other relevant information: </label>
 				</div>
 				<div class="rightCol">
-					<textarea class="input-field" style="height:50px;resize:vertical;"  name="message" placeholder="(Template install, copy WordPress, exclude graphics directory, etc.)"></textarea>
+					<textarea class="input-field" style="height:150px;resize:vertical;"  name="message" placeholder="(Template install, copy WordPress, exclude graphics directory, etc.)"></textarea>
 				</div>
 			</div>
 			<input id="submit" type="submit" value="Submit">   
 		</table>
-	</form>
+    </form>
+    <footer>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <!-- import the webpage's javascript file glitch testing only -->
+        <!-- <script src="/script.js"></script> -->
+    </footer>
 </body>
 </html>
