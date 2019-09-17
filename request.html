@@ -7,13 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- true css file path -->
-    <link rel="stylesheet" type="text/css" href="lib/css/style.css">
-    <!-- import the webpage's stylesheet glitch testing only -->
-    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="lib/css/style.css"> -->
+    <!-- import the webpage's stylesheet glitch only -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Dev Request Site Checklist</h1>
-    <form id="form" method="post" action="lib/php/contactForm.php">
+	<nav>
+		<ul>
+			<li><a class="navbar-brand active" href="#"><img class="miva" src="https://cdn.glitch.com/937e1b48-75ff-4760-81d6-41240926a850%2Fmiva-logo.png?v=1568309913872" alt="Miva"></a></li>
+			<li><a href="#">LINK #1</a></li>
+			<li><a href="#">LINK #2</a></li>
+			<li><a href="#">LINK #3</a></li>
+			<li><a href="#">LINK #4</a></li>
+		</ul>
+	</nav>
+	<form id="form" method="post" action="contactForm.php" name="contactForm">
+		<h1>Dev Request Site Form</h1>
 		<table>
 			<!-- Senders Email -->
 			<div>
@@ -39,7 +48,7 @@
 					<label for="ticket">Original Ticket ID: </label>
 				</div>
 				<div class="rightCol">
-					<input class="input-field" type="text" name="ticket" placeholder="XXX-XXX-XXXXX">
+					<input class="input-field" type="text" name="ticket" placeholder="ex: XXX-XXX-XXXXX">
 				</div>
 			</div>
 			<!-- Request Type -->
@@ -74,16 +83,15 @@
 					<textarea class="input-field" style="height:150px;resize:vertical;"  name="message" placeholder="(Template install, copy WordPress, exclude graphics directory, etc.)"></textarea>
 				</div>
 			</div>
-			<input id="submit" type="submit" value="Submit">   
+			<button id="submit">Submit</button> 
 		</table>
     </form>
     <footer>
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        <!-- import the webpage's javascript file glitch testing only -->
-        <!-- <script src="/script.js"></script> -->
-	<!-- true scripts file path -->
-	<script src="lib/js/script.js"></script>
+        <!-- import the webpage's javascript file glitch only -->
+        <script src="script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
     </footer>
 </body>
 </html>
