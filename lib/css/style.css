@@ -1,18 +1,59 @@
 html,
 body {
-	background-color: #A0CFEC;
+	/*background-color: #A0CFEC;*/
+  	background-color: rgb(66 , 92 , 121);
 	text-align: center;
 	font-family: 'Raleway', Helvetica, sans-serif;
 	/*min-width: 320px;*/
+	margin: 0;
+}
+
+.miva {
+	width: 44%;
+}
+
+ul {
+	display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  line-height: 25px;
+}
+
+li a {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #748fad;
+  color: #FFF
+}
+
+.active {
+  /*background-color: #748fad;*/
 }
 
 h1 {
-  font-size: 300%;
+  	font-size: 300%;
+
 }
 
 #form {
 	background-color: rgb(250, 250, 250);
-	margin: 0 auto;
+	margin: 8vh auto;
 	border-radius: 4px;
 	width: 75%;
 	max-width: 900px;
@@ -52,7 +93,7 @@ h1 {
 	font-size: 1em;
 	height: 40px;
 	width: 96px;
-	margin: 10px;
+	margin: 30px 0;
 	border: 0px solid;
 }
 
@@ -74,7 +115,17 @@ h1 {
   width: 87px;
 }
 
+label.error {
+    color: red;
+}
+
 @media screen and (max-width: 833px) {
+	#form {
+		margin: 10vh auto;
+	}
+	h1 {
+		font-size: 250%;
+	}
 	.input-field {
 		width: 80%;
 	}
@@ -84,13 +135,19 @@ h1 {
 }
 
 @media screen and (max-width: 520px) {
+	#form {
+		margin: 11vh auto;
+	}
+	h1 {
+		font-size: 180%;
+	}
 	.labels {
 		width: 100%;
 		text-align: left;
 	}
 	.rightCol {
 		width: 80%;
-		float: left;
+		display: flex;
 	}
 	.input-field {
 		width: 100%;
